@@ -1,0 +1,35 @@
+# Operating-system files
+.DS_Store
+Thumbs.db
+
+# Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+logs/
+
+# Test and coverage output
+coverage/
+playwright-report/
+test-results/
+
+# Build artifacts
+.output/
+.nuxt/
+dist/
+
+# Dependencies
+node_modules/
+
+# Local temporary files
+tmp/
+temp/
