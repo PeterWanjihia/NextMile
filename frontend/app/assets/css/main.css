@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand blues */
+  --nextmile-blue-50: #eef6ff;
+  --nextmile-blue-100: #d9ebff;
+  --nextmile-blue-500: #1769e0;
+  --nextmile-blue-600: #1258bc;
+  --nextmile-blue-700: #0f4796;
+
+
+  /* Brand navy */
+  --nextmile-navy-900: #102a43;
+  --nextmile-navy-950: #091c2e;
+
+  /* Neutral and page surfaces */
+  --nextmile-white: #ffffff;
+
+  /*
+   * Main page canvas:
+   * a very subtle cool near-white rather than pure white.
+   */
+  --nextmile-page: #fafbfd;
+
+  /*
+   * Slightly more visible section surface.
+   * Useful around white cards and grouped panels.
+   */
+  --nextmile-surface: #f6f9fc;
+
+  /*
+   * Very light section alternation.
+   * Useful for the fleet and FAQ areas.
+   */
+  --nextmile-surface-subtle: #f9fbfd;
+
+  /*
+   * Stronger pale-blue section.
+   * Useful for pricing, eligibility and informational bands.
+   */
+  --nextmile-surface-blue: #edf4fe;
+
+  --nextmile-border: #dde4ec;
+
+  /* Text */
+  --nextmile-text: #17212b;
+  --nextmile-text-muted: #5d6b79;
+
+  /* Semantic colours */
+  --nextmile-success: #16794a;
+  --nextmile-warning: #b76e00;
+  --nextmile-danger: #a83b3b;
+
+  /* Layout */
+  --nextmile-container: 76rem;
+
+  /* Radius */
+  --nextmile-radius-sm: 0.5rem;
+  --nextmile-radius-md: 0.75rem;
+  --nextmile-radius-lg: 1rem;
+  --nextmile-radius-xl: 1.5rem;
+
+  /* Elevation */
+  --nextmile-shadow-card:
+    0 1px 2px rgb(16 42 67 / 4%),
+    0 12px 36px rgb(16 42 67 / 8%);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background: var(--nextmile-page);
+  }
+
+  body {
+    margin: 0;
+    min-width: 20rem;
+    min-height: 100vh;
+
+    background: var(--nextmile-page);
+    color: var(--nextmile-text);
+
+    font-family:
+      Inter,
+      ui-sans-serif,
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      sans-serif;
+
+    line-height: 1.5;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  img,
+  picture,
+  svg,
+  canvas {
+    display: block;
+    max-width: 100%;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  ::selection {
+    background: var(--nextmile-blue-100);
+    color: var(--nextmile-navy-900);
+  }
+
+  :focus-visible {
+    outline: 3px solid rgb(23 105 224 / 35%);
+    outline-offset: 3px;
+  }
+}
