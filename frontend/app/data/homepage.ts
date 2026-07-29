@@ -1,4 +1,15 @@
-import type {  HomeFleetCategory,} from '~/types/homepage';
+import type {
+  HomeApplicationStep,
+  HomeEligibilityOverview,
+  HomeFaqSection,
+  HomeFinalCta,
+  HomeFleetCategory,
+  HomePricingMetric,
+  HomeTestimonials,
+  HomeWhyChooseItem,
+} from '~/types/homepage';
+
+
 export const homeHero = {
   eyebrow: 'Weekly vehicle rentals for gig drivers',
 
@@ -202,3 +213,540 @@ export const homeFleetPreview = {
     to: '/fleet',
   },
 } as const;
+
+export const homePricingSummary = {
+  contentStatus: 'placeholder',
+
+  heading:
+    'Straightforward Weekly Pricing',
+
+  description:
+    'Know the weekly rate, deposit and important terms before you apply. No hidden fees.',
+
+  detailsAction: {
+    label: 'View full pricing details',
+    to: '/pricing',
+  },
+
+  metrics: [
+    {
+      id: 'weekly-rental',
+
+      icon: 'lucide:circle-dollar-sign',
+
+      label: 'Weekly rentals from',
+
+      kind: 'money',
+
+      amount: 189,
+
+      emphasized:true,
+
+      currency: 'USD',
+
+      suffix: '/ week',
+    },
+    {
+      id: 'deposit',
+
+      icon: 'lucide:shield-check',
+
+      label: 'Deposit from',
+
+      kind: 'money',
+
+      amount: 300,
+
+      currency: 'USD',
+    },
+    {
+      id: 'minimum-term',
+
+      icon: 'lucide:calendar-days',
+
+      label: 'Minimum term',
+
+      kind: 'text',
+
+      value: '1 week',
+    },
+    {
+      id: 'payment-schedule',
+
+      icon: 'lucide:credit-card',
+
+      label: 'Payment schedule',
+
+      kind: 'text',
+
+      value: 'Weekly',
+    },
+  ] satisfies readonly HomePricingMetric[],
+
+  footnote:
+    'Includes standard maintenance arrangement and local support.',
+} as const;
+
+export const homeApplicationProcess = {
+  contentStatus: 'placeholder',
+
+  heading:
+    'From Application to Earning in Four Steps',
+
+  description:
+    'A simple, guided process designed to get you into the right vehicle without unnecessary delays.',
+
+  steps: [
+    {
+      id: 'apply-online',
+
+      icon: 'lucide:clipboard-list',
+
+      title: 'Apply Online',
+
+      description:
+        'Tell us about your driving work and when you need a vehicle.',
+
+      contentStatus: 'placeholder',
+    },
+    {
+      id: 'get-reviewed',
+
+      icon: 'lucide:user-round',
+
+      title: 'Get Reviewed',
+
+      description:
+        'NextMile reviews your application and confirms the next requirements.',
+
+      contentStatus: 'placeholder',
+    },
+    {
+      id: 'choose-and-collect',
+
+      icon: 'lucide:car-front',
+
+      title: 'Choose & Collect',
+
+      description:
+        'Confirm availability, complete the paperwork and schedule your pickup.',
+
+      contentStatus: 'placeholder',
+    },
+    {
+      id: 'start-driving',
+
+      icon: 'custom:steering-wheel',
+
+      title: 'Start Driving',
+
+      description:
+        'Pick up your vehicle and start earning on your approved platform.',
+
+      contentStatus: 'placeholder',
+    },
+  ] satisfies readonly HomeApplicationStep[],
+} as const;
+
+export const homeEligibilityOverview:
+  HomeEligibilityOverview = {
+    contentStatus: 'placeholder',
+
+    sectionHeading:
+      'Driver requirements and eligibility assistance',
+
+    requirements: {
+      heading: 'Basic Driver Requirements',
+
+      items: [
+        {
+          id: 'minimum-age',
+          label: 'Age 21 or older',
+          contentStatus: 'placeholder',
+        },
+        {
+          id: 'valid-license',
+          label: 'Valid driver’s license',
+          contentStatus: 'placeholder',
+        },
+        {
+          id: 'verification',
+          label: 'Ability to complete verification',
+          contentStatus: 'placeholder',
+        },
+        {
+          id: 'weekly-payments',
+          label:
+            'Ability to make weekly rental payments',
+          contentStatus: 'placeholder',
+        },
+        {
+          id: 'approved-use',
+          label: 'Approved use of the vehicle',
+          contentStatus: 'placeholder',
+        },
+        {
+          id: 'supporting-documents',
+          label: 'Required supporting documents',
+          contentStatus: 'placeholder',
+        },
+      ],
+
+      detailsAction: {
+        label: 'See full requirements',
+        to: '/requirements',
+      },
+    },
+    assistance: {
+      heading:
+        'Not sure whether you qualify?',
+
+      description:
+        'Tell us which platform you drive for and when you need a vehicle. We’ll explain the next steps.',
+
+      primaryAction: {
+        label: 'Check My Eligibility',
+        to: '/apply',
+      },
+
+      illustration: {
+        src:
+          '/images/home/eligibility/qualifications-checklist.webp',
+
+        alt: '',
+
+        width: 900,
+
+        height: 760,
+
+        objectPosition: 'center',
+
+        contentStatus: 'placeholder',
+      },
+    },
+  };
+
+export const homeWhyChoose = {
+  contentStatus: 'placeholder',
+
+  heading: 'Why Choose NextMile?',
+
+  items: [
+    {
+      id: 'practical-weekly-terms',
+
+      icon: 'lucide:calendar-days',
+
+      title: 'Practical Weekly Terms',
+
+      description:
+        'Rent based on your working needs.',
+
+      contentStatus: 'placeholder',
+    },
+    {
+      id: 'vehicles-for-real-work',
+
+      icon: 'lucide:car-front',
+
+      title: 'Vehicles for Real Work',
+
+      description:
+        'Fuel efficient, reliable and ready to go.',
+
+      contentStatus: 'placeholder',
+    },
+    {
+      id: 'clear-next-steps',
+
+      icon: 'lucide:clipboard-check',
+
+      title: 'Clear Next Steps',
+
+      description:
+        'Know the process, requirements and terms.',
+
+      contentStatus: 'placeholder',
+    },
+    {
+      id: 'local-support',
+
+      icon: 'lucide:phone-call',
+
+      title: 'Local Support',
+
+      description:
+        'Speak directly with our local team.',
+
+      contentStatus: 'placeholder',
+    },
+    {
+      id: 'flexible-categories',
+
+      icon: 'custom:steering-wheel',
+
+      title: 'Flexible Categories',
+
+      description:
+        'Choose based on your work and preferences.',
+
+      contentStatus: 'placeholder',
+    },
+    {
+      id: 'fast-communication',
+
+      icon: 'lucide:messages-square',
+
+      title: 'Fast Communication',
+
+      description:
+        'Get updates and answers without delays.',
+
+      contentStatus: 'placeholder',
+    },
+  ] satisfies readonly HomeWhyChooseItem[],
+} as const;
+
+export const homeTestimonials: HomeTestimonials = {
+  contentStatus: 'placeholder',
+
+  heading: 'What Drivers Are Saying',
+
+  trustStatement:
+    'Real drivers. Real experiences.',
+
+  items: [
+    {
+      id: 'marcus',
+
+      quote:
+        'The application was clear and I knew exactly what documents I needed before pickup. Great experience!',
+
+      person: {
+        name: 'Marcus T.',
+
+        role: 'Delivery Driver',
+
+        image: {
+          src:
+            '/images/home/testimonials/marcus.webp',
+
+          alt:
+            'Portrait of Marcus T., a delivery driver',
+
+          width: 320,
+          height: 320,
+
+          objectPosition: 'center',
+
+          contentStatus: 'placeholder',
+        },
+      },
+
+      contentStatus: 'placeholder',
+    },
+    {
+      id: 'jasmine',
+
+      quote:
+        'The car gets great gas mileage and is perfect for my delivery routes. Weekly payments make budgeting easy.',
+
+      person: {
+        name: 'Jasmine R.',
+
+        role: 'Instacart Shopper',
+
+        image: {
+          src:
+            '/images/home/testimonials/jasmine.webp',
+
+          alt:
+            'Portrait of Jasmine R., an Instacart shopper',
+
+          width: 320,
+          height: 320,
+
+          objectPosition: 'center',
+
+          contentStatus: 'placeholder',
+        },
+      },
+
+      contentStatus: 'placeholder',
+    },
+    {
+      id: 'daniel',
+
+      quote:
+        'Support is fast and local. I can actually talk to someone when I need help.',
+
+      person: {
+        name: 'Daniel K.',
+
+        role: 'Rideshare Driver',
+
+        image: {
+          src:
+            '/images/home/testimonials/daniel.webp',
+
+          alt:
+            'Portrait of Daniel K., a rideshare driver',
+
+          width: 320,
+          height: 320,
+
+          objectPosition: 'center',
+
+          contentStatus: 'placeholder',
+        },
+      },
+
+      contentStatus: 'placeholder',
+    },
+  ],
+};
+
+export const homeFaq: HomeFaqSection = {
+  contentStatus: 'placeholder',
+
+  heading: 'Frequently Asked Questions',
+
+  items: [
+    {
+      id: 'weekly-rental-cost',
+
+      question:
+        'How much is the weekly rental?',
+
+      answer:
+        'Weekly rental rates currently start from $189 for economy delivery vehicles and $229 for rideshare-style vehicles. Your final rate depends on the available vehicle category and agreed rental terms.',
+
+      contentStatus: 'placeholder',
+    },
+    {
+      id: 'supported-platforms',
+
+      question:
+        'Which platforms can I use the vehicle for?',
+
+      answer:
+        'Vehicles may be suitable for approved delivery and rideshare platforms such as DoorDash, Uber Eats, Instacart and similar services. Platform eligibility should be confirmed before you apply.',
+
+      contentStatus: 'placeholder',
+    },
+    {
+      id: 'application-documents',
+
+      question:
+        'What documents do I need to apply?',
+
+      answer:
+        'Applicants generally need a valid driver’s license, identity and address information, proof of eligibility to drive, and any additional documents required during verification.',
+
+      contentStatus: 'placeholder',
+    },
+    {
+      id: 'approval-time',
+
+      question:
+        'How quickly can I get approved?',
+
+      answer:
+        'Approval time depends on how quickly your information and supporting documents can be verified. Complete applications can usually be reviewed faster than applications with missing information.',
+
+      contentStatus: 'placeholder',
+    },
+    {
+      id: 'insurance',
+
+      question:
+        'Is insurance included?',
+
+      answer:
+        'Insurance arrangements depend on the rental agreement, vehicle category and approved use of the vehicle. The applicable coverage and driver responsibilities will be explained before collection.',
+
+      contentStatus: 'placeholder',
+    },
+    {
+      id: 'maintenance',
+
+      question:
+        'What happens if the vehicle needs maintenance?',
+
+      answer:
+        'Contact NextMile as soon as you notice a mechanical issue. We will explain the appropriate next steps and coordinate approved maintenance where required.',
+
+      contentStatus: 'placeholder',
+    },
+    {
+      id: 'personal-use',
+
+      question:
+        'Can I use the vehicle for personal trips?',
+
+      answer:
+        'Permitted personal use depends on the rental agreement. Any mileage, location or usage restrictions should be reviewed before you begin the rental.',
+
+      contentStatus: 'placeholder',
+    },
+    {
+      id: 'missed-payment',
+
+      question:
+        'What happens if I miss a payment?',
+
+      answer:
+        'Contact NextMile immediately if you expect a payment problem. Missed payments may affect your rental agreement, so early communication is important.',
+
+      contentStatus: 'placeholder',
+    },
+  ],
+};
+
+export const homeFinalCta: HomeFinalCta = {
+  contentStatus: 'placeholder',
+
+  heading:
+    'Ready to Get Back on the Road?',
+
+  description:
+    'Check current availability and tell us what kind of driving work you plan to do. The application only takes a few minutes.',
+
+  primaryAction: {
+    label:
+      'Check Vehicle Availability',
+
+    to:
+      '/fleet',
+  },
+
+  trustItems: [
+    {
+      id: 'no-obligation',
+
+      icon:
+        'lucide:circle-check',
+
+      label:
+        'No obligation to apply',
+    },
+    {
+      id: 'mobile-friendly',
+
+      icon:
+        'lucide:smartphone',
+
+      label:
+        'Mobile-friendly process',
+    },
+    {
+      id: 'local-support',
+
+      icon:
+        'lucide:headphones',
+
+      label:
+        'Local support',
+    },
+  ],
+};

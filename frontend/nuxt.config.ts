@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
 
   devtools: {
-    enabled: true,
+    enabled: import.meta.dev,
   },
 
   modules: [
@@ -28,6 +28,12 @@ export default defineNuxtConfig({
   },
 
   app: {
+    /**
+     * The custom domain serves the application
+     * from the domain root.
+     */
+    baseURL: '/',
+
     head: {
       htmlAttrs: {
         lang: 'en-US',
@@ -38,7 +44,8 @@ export default defineNuxtConfig({
       meta: [
         {
           name: 'viewport',
-          content: 'width=device-width, initial-scale=1',
+          content:
+            'width=device-width, initial-scale=1',
         },
         {
           name: 'theme-color',

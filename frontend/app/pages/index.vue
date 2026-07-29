@@ -18,5 +18,12 @@ useSeoMeta({
     <HomeHero />
     <HomeBenefitsStrip />
     <HomeFleetPreview />
+    <HomePricingSummary />
+    <HomeApplicationProcess />
+    <HomeEligibilityOverview />
+    <HomeWhyChoose />
+    <HomeTestimonials />
+    <HomeFaq />
+    <HomeFinalCta />
   </div>
 </template>

@@ -95,3 +95,160 @@ export interface HomeFleetCategory {
    */
   readonly contentStatus: ContentStatus;
 }
+
+export type HomePricingMetric =
+  | {
+      readonly id: string;
+      readonly icon: string;
+      readonly label: string;
+
+      readonly kind: 'money';
+      readonly amount: number;
+      readonly currency: 'USD';
+      readonly suffix?: string;
+      readonly emphasized?: boolean;
+    }
+  | {
+      readonly id: string;
+      readonly icon: string;
+      readonly label: string;
+
+      readonly kind: 'text';
+      readonly value: string;
+};
+
+export interface HomeApplicationStep {
+  
+  readonly id: string;
+ 
+  readonly icon: string;
+
+  readonly title: string;
+  readonly description: string;
+
+  readonly contentStatus: ContentStatus;
+}
+
+export interface HomeRequirementItem {
+  readonly id: string;
+  readonly label: string;
+  readonly contentStatus: ContentStatus;
+}
+
+export interface HomeEligibilityIllustration {
+  readonly src: string;
+  readonly alt: string;
+  readonly width: number;
+  readonly height: number;
+  readonly objectPosition?: string;
+  readonly contentStatus: ContentStatus;
+}
+
+export interface HomeEligibilityOverview {
+  readonly contentStatus: ContentStatus;
+
+  /**
+   * Semantic heading for the complete paired section.
+   * This is rendered as a visually hidden heading.
+   */
+  readonly sectionHeading: string;
+
+  readonly requirements: {
+    readonly heading: string;
+
+    readonly items:
+      readonly HomeRequirementItem[];
+
+    readonly detailsAction: {
+      readonly label: string;
+      readonly to: string;
+    };
+  };
+
+  readonly assistance: {
+    readonly heading: string;
+    readonly description: string;
+
+    readonly primaryAction: {
+      readonly label: string;
+      readonly to: string;
+    };
+
+    /**
+     * A real illustration can be provided later.
+     * Null keeps the development fallback valid.
+     */
+    readonly illustration:
+      HomeEligibilityIllustration | null;
+  };
+}
+
+export interface HomeWhyChooseItem {
+  readonly id: string;
+  readonly icon: string;
+  readonly title: string;
+  readonly description: string;
+  readonly contentStatus: ContentStatus;
+}
+
+export interface HomeTestimonialImage {
+  readonly src: string;
+  readonly alt: string;
+  readonly width: number;
+  readonly height: number;
+  readonly objectPosition?: string;
+  readonly contentStatus: ContentStatus;
+}
+
+export interface HomeTestimonial {
+  readonly id: string;
+  readonly quote: string;
+
+  readonly person: {
+    readonly name: string;
+    readonly role: string;
+    readonly image: HomeTestimonialImage;
+  };
+
+  readonly contentStatus: ContentStatus;
+}
+
+export interface HomeTestimonials {
+  readonly contentStatus: ContentStatus;
+  readonly heading: string;
+  readonly trustStatement: string;
+  readonly items: readonly HomeTestimonial[];
+}
+
+export interface HomeFaqItem {
+  readonly id: string;
+  readonly question: string;
+  readonly answer: string;
+  readonly contentStatus: ContentStatus;
+}
+
+export interface HomeFaqSection {
+  readonly contentStatus: ContentStatus;
+  readonly heading: string;
+  readonly items: readonly HomeFaqItem[];
+}
+
+export interface HomeFinalCtaTrustItem {
+  readonly id: string;
+  readonly icon: string;
+  readonly label: string;
+}
+
+export interface HomeFinalCta {
+  readonly contentStatus: ContentStatus;
+  readonly heading: string;
+  readonly description: string;
+
+  readonly primaryAction: {
+    readonly label: string;
+    readonly to: string;
+  };
+
+  readonly trustItems:
+    readonly HomeFinalCtaTrustItem[];
+}

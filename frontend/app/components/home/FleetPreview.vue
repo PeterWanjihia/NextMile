@@ -28,8 +28,8 @@ const economyCategory =
     class="
     bg-[var(--nextmile-surface-subtle)]
     pt-8 pb-14
-    sm:pt-9 sm:pb-16
-    lg:pt-10 lg:pb-20
+    sm:pt-9 sm:pb-5
+    lg:pt-10 lg:pb-5
     "
     aria-labelledby="home-fleet-heading"
   >
