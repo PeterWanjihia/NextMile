@@ -1,16 +1,21 @@
 <script setup lang="ts">
 useSeoMeta({
-  title: 'Contact',
-  description: 'Contact NextMile Rentals.',
+  title: 'Contact NextMile Rentals',
+  description:
+    'Call, email or send a message to NextMile Rentals about weekly vehicle availability, pricing, eligibility or rental support in the Portland area.',
+
+  ogTitle: 'Contact NextMile Rentals',
+
+  ogDescription:
+    'Get help with vehicle availability, pricing, eligibility and weekly rentals in the Portland area.',
 });
 </script>
 
 <template>
-  <section class="py-24">
-    <div class="mx-auto max-w-7xl px-5 sm:px-8">
-      <h1 class="text-5xl font-bold tracking-tight text-slate-950">
-        Contact NextMile
-      </h1>
-    </div>
-  </section>
+  <div>
+    <ContactHero />
+    <ContactWorkspace />
+    <ContactServiceArea />
+    <ContactFinalCta />
+  </div>
 </template>

@@ -1,16 +1,23 @@
 <script setup lang="ts">
 useSeoMeta({
-  title: 'Fleet',
-  description: 'Explore NextMile vehicle categories.',
+  title: 'Vehicle Categories for Gig Drivers',
+  description:
+    'Compare NextMile weekly rental vehicle categories, pricing, deposits and current availability in the Portland area.',
+
+  ogTitle:
+    'Vehicle Categories for Gig Drivers | NextMile Rentals',
+
+  ogDescription:
+    'Choose a practical weekly rental vehicle for delivery, rideshare and approved gig work in the Portland area.',
 });
 </script>
 
 <template>
-  <section class="py-24">
-    <div class="mx-auto max-w-7xl px-5 sm:px-8">
-      <h1 class="text-5xl font-bold tracking-tight text-slate-950">
-        Fleet
-      </h1>
-    </div>
-  </section>
+  <div>
+    <FleetHero />
+    <FleetAvailabilityNotice />
+    <FleetCategoryList />
+    <FleetAssistance />
+    <FleetBenefits />
+  </div>
 </template>

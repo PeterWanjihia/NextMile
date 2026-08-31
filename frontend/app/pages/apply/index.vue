@@ -10,17 +10,5 @@ useSeoMeta({
 });
 </script>
 <template>
-  <UiSection spacing="large">
-    <UiContainer size="narrow">
-      <h1
-        class="
-          text-4xl font-bold tracking-tight
-          text-slate-950
-          sm:text-5xl
-        "
-      >
-        Driver Application
-      </h1>
-    </UiContainer>
-  </UiSection>
+  <ApplicationWizard />
 </template>

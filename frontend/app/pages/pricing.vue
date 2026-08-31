@@ -1,16 +1,25 @@
 <script setup lang="ts">
 useSeoMeta({
-  title: 'Pricing',
-  description: 'View NextMile weekly rental pricing.',
+  title: 'Straightforward Weekly Vehicle Rental Pricing',
+  description:
+    'Compare NextMile weekly vehicle rental rates, deposits, rental terms and potential additional charges for gig and delivery drivers.',
+
+  ogTitle:
+    'Weekly Vehicle Rental Pricing | NextMile Rentals',
+
+  ogDescription:
+    'See clear weekly rental rates, deposits and terms for NextMile delivery and rideshare vehicle categories.',
 });
 </script>
 
 <template>
-  <section class="py-24">
-    <div class="mx-auto max-w-7xl px-5 sm:px-8">
-      <h1 class="text-5xl font-bold tracking-tight text-slate-950">
-        Pricing
-      </h1>
-    </div>
-  </section>
+  <div>
+    <PricingHero />
+    <PricingFeatureStrip />
+    <PricingOptions />
+    <PricingMetricStrip />
+    <PricingPolicies />
+    <PricingFaq />
+    <PricingFinalCta />
+  </div>
 </template>

@@ -1,16 +1,24 @@
 <script setup lang="ts">
 useSeoMeta({
-  title: 'Requirements',
-  description: 'Review NextMile driver rental requirements.',
+  title: 'Driver Requirements and Eligibility',
+  description:
+    'Review NextMile age, license, verification, payment, service-area and approved-use requirements before applying for a weekly vehicle rental.',
+
+  ogTitle:
+    'Driver Requirements and Eligibility | NextMile Rentals',
+
+  ogDescription:
+    'See what you need to apply for a NextMile weekly rental vehicle in the Portland area.',
 });
 </script>
 
 <template>
-  <section class="py-24">
-    <div class="mx-auto max-w-7xl px-5 sm:px-8">
-      <h1 class="text-5xl font-bold tracking-tight text-slate-950">
-        Driver requirements
-      </h1>
-    </div>
-  </section>
+  <div>
+    <RequirementsHero />
+    <RequirementsBasicRequirements />
+    <RequirementsGuidance />
+    <RequirementsApproval />
+    <RequirementsFaq />
+    <RequirementsFinalCta />
+  </div>
 </template>

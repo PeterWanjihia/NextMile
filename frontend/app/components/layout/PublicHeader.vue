@@ -143,13 +143,19 @@ function isNavigationItemActive(
           </div>
 
           <!-- Tablet and medium desktop: primary CTA only -->
-          <UiButton
-            to="/apply"
-            class="hidden md:inline-flex xl:hidden"
-            size="md"
+          <div
+            class="
+              hidden
+              md:block xl:hidden
+            "
           >
-            Apply Now
-          </UiButton>
+            <UiButton
+              to="/apply"
+              size="md"
+            >
+              Apply Now
+            </UiButton>
+          </div>
 
           <!-- Mobile/tablet menu trigger -->
           <button
